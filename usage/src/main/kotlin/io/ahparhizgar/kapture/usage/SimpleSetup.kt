@@ -3,7 +3,7 @@ package io.ahparhizgar.kapture.usage
 import io.ahparhizgar.kapture.processor.annotation.Kontainer
 import io.ahparhizgar.kapture.processor.annotation.Kontains
 
-@Kontainer(fileName = "", keyPrefix = "profile_")
+@Kontainer(keyPrefix = "profile_")
 interface SimpleSetupLocalDataSource {
     @Kontains(Key.USER_NAME)
     suspend fun saveUserName(userName: String)
