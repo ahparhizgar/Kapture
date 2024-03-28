@@ -1,6 +1,8 @@
 package io.ahparhizgar.kapture.processor.annotation
 
 annotation class Kontainer(val keyPrefix: String = "")
+annotation class KontainerConstructor
+annotation class KontainEncoder
 
 annotation class HiltKontainer
 annotation class Kontains(val key: String)
