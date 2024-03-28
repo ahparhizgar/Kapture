@@ -12,4 +12,5 @@ dependencies {
     implementation(project(":processor"))
     ksp(project(":processor"))
     implementation("androidx.datastore:datastore-preferences-core:1.0.0")
+    implementation("com.google.dagger:dagger:2.51")
 }

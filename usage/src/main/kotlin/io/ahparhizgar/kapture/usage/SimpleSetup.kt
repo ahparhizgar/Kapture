@@ -39,7 +39,7 @@ class SimpleSetupLocalDataSource_Impl(datastore: Any) : SimpleSetupLocalDataSour
     }
 }
 
-object Kontain {
+private object Kontain {
     fun provideSimpleSetupLocalDataSource(context: Any): SimpleSetupLocalDataSource {
         error("generated method")
     }
