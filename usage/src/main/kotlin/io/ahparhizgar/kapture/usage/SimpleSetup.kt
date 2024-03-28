@@ -18,13 +18,37 @@ interface SimpleSetupLocalDataSource {
     }
 }
 
-private fun usage() {
+private suspend fun usage() {
     // for android module
-    Kontain.provideSimpleSetupLocalDataSource(context).getUserName
+    Kontain.provideSimpleSetupLocalDataSource(context = Unit).getUserName()
     // for jvm modules
-    Kontain.provideSimpleSetupLocalDataSource().getUserName
+    Kontain.provideSimpleSetupLocalDataSource().getUserName()
     // for all platforms
-    Kontain.provideSimpleSetupLocalDataSource(dataStore).getUserName
+    Kontain.provideSimpleSetupLocalDataSource(dataStore = Unit).getUserName()
     // underlying implementation
-    SimpleSetupLocalDataSource_Imp(datastore).getUserName
+    SimpleSetupLocalDataSource_Impl(datastore = Unit).getUserName()
+}
+
+class SimpleSetupLocalDataSource_Impl(datastore: Any) : SimpleSetupLocalDataSource {
+    override suspend fun saveUserName(userName: String) {
+        error("generated method")
+    }
+
+    override suspend fun getUserName(): String? {
+        error("generated method")
+    }
+}
+
+object Kontain {
+    fun provideSimpleSetupLocalDataSource(context: Any): SimpleSetupLocalDataSource {
+        error("generated method")
+    }
+
+    fun provideSimpleSetupLocalDataSource(dataStore: Unit): SimpleSetupLocalDataSource {
+        error("generated method")
+    }
+
+    fun provideSimpleSetupLocalDataSource(): SimpleSetupLocalDataSource {
+        error("generated method")
+    }
 }

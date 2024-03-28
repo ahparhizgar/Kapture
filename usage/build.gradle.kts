@@ -11,4 +11,5 @@ java {
 dependencies {
     implementation(project(":processor"))
     ksp(project(":processor"))
+    implementation("androidx.datastore:datastore-preferences-core:1.0.0")
 }
